@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');
+
+html, body, #root  {
+    font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 300;            
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-size: 16px;
+}
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 60px 240px;
+    grid-row-gap: 15px;
+    align-items: center;
+    width: 300px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 0.250em;
+    
+    background-color: #212121;
+}
+@media (min-width: 576px) {
+    .container {
+        box-shadow: 10px 10px 20px #888888;
+    }
+}
+.output {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20px auto;
+    grid-row-gap: 2px;
+    font-family: 'Share Tech Mono', monospace;    
+    text-align: right;
+    padding: 5px;
+    background-color: #009688;
+    border: 2px solid #9e9e9e;
+    border-radius: 0.250em;
+}
+#formula {
+    /* 14px */
+    font-size: 0.875em;
+    font-weight: 300;
+    line-height: 1.5;
+    color: rgb(178, 223, 219);
+}
+#display {
+    /* 20px */
+    font-size: 1.250em;
+    font-weight: 400;
+}
+.warning {
+    color: #e040fb;
+}
+.keypads {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 44px);
+    grid-gap: 5px;
+}
+#formula, #display {
+    grid-column: 1/5;
+}
+#clear, #zero {
+    grid-column: 1 / 3;
+}
+.keypad {
+    /* 20px */
+    font-size: 1.250em;
+    font-weight: 400;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0.250em;            
+    user-select: none;
+    background-color: #9e9e9e; 
+    transition: background-color .15s ease-in-out;
+}
+.keypad:hover {
+    background-color: #616161 !important;
+}
+.keypad-danger {
+    background-color: #ff4081;
+}
+.keypad-danger:hover {
+    background-color: #c2185b !important;
+}
+.keypad-operators {
+    background-color: #795548;
+}
+.keypad-operators:hover {
+    background-color: #5d4037 !important;
+}
+#equals {
+    background-color: #ff5722;
+}
+#equals:hover {
+    background-color: #e64a19 !important;
+}
